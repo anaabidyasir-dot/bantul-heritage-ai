@@ -77,9 +77,13 @@ export function createAssistantMessage(response, mode = 'demo') {
 
   // Live error warning (jika Gemini gagal dan fallback ke demo)
   if (response._liveError) {
+    const errMsg = escapeHtml(response._liveError);
+    const showLink = response._liveError.includes('aistudio') || response._liveError.includes('diaktifkan');
     contentHtml += `
-      <div class="answer-source" role="alert" style="border-left-color: var(--color-error); margin-bottom: 8px;">
-        ⚠️ <strong>Peringatan:</strong> Koneksi ke Gemini AI gagal (${escapeHtml(response._liveError)}). Menampilkan jawaban demo.
+      <div class="answer-source" role="alert" style="border-left-color: var(--color-error); margin-bottom: 8px; background: #fff5f5;">
+        ⚠️ <strong>Gemini AI gagal terhubung.</strong><br>
+        <span style="font-size:0.85em">${errMsg}</span>
+        ${showLink ? `<br><a href="https://aistudio.google.com/" target="_blank" rel="noopener" style="color:var(--color-primary);font-weight:600;">→ Buka Google AI Studio untuk aktifkan API</a>` : ''}
       </div>
     `;
   }

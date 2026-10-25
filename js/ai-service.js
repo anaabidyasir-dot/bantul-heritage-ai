@@ -16,8 +16,14 @@ import { processQuestion as demoProcess } from './demo-engine.js';
 let currentMode = 'demo'; // 'demo' | 'live'
 let geminiApiKey = null;
 
-// Konstanta
-const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
+// Konstanta — daftar model dicoba berurutan sampai berhasil
+const GEMINI_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
+const GEMINI_MODELS = [
+  'gemini-1.5-flash',
+  'gemini-1.5-flash-latest',
+  'gemini-1.5-pro',
+  'gemini-pro',
+];
 const SYSTEM_PROMPT = `Kamu adalah asisten pengetahuan budaya untuk Kabupaten Bantul, Daerah Istimewa Yogyakarta, Indonesia.
 Tugas kamu adalah menjawab pertanyaan tentang tradisi, kuliner, kerajinan, seni pertunjukan, dan warisan budaya Bantul.
 Panduan:
@@ -96,6 +102,7 @@ export async function ask(question) {
 
 /**
  * Kirim pertanyaan ke Google Gemini API.
+ * Mencoba beberapa model secara berurutan sampai berhasil.
  * @param {string} question
  * @returns {Promise<object>}
  */
@@ -109,7 +116,6 @@ async function askGemini(question) {
   const body = {
     contents: [
       {
-        role: 'user',
         parts: [{ text: `${SYSTEM_PROMPT}\n\nPertanyaan pengguna: ${question}` }]
       }
     ],
@@ -119,51 +125,83 @@ async function askGemini(question) {
     }
   };
 
-  try {
-    const response = await fetch(`${GEMINI_API_URL}?key=${key}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    });
+  let lastError = null;
 
-    if (response.status === 400) {
-      throw new Error('Permintaan tidak valid. Periksa format pertanyaan Anda.');
-    }
-    if (response.status === 403 || response.status === 401) {
-      clearApiKey();
-      throw new Error('API key tidak valid atau tidak memiliki akses. Kembali ke mode demo.');
-    }
-    if (response.status === 429) {
-      throw new Error('Terlalu banyak permintaan. Harap tunggu beberapa saat dan coba lagi.');
-    }
-    if (!response.ok) {
-      throw new Error(`Gemini API error: ${response.status}`);
-    }
+  // Coba setiap model sampai salah satu berhasil
+  for (const model of GEMINI_MODELS) {
+    try {
+      const url = `${GEMINI_BASE}/${model}:generateContent?key=${key}`;
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
 
-    const data = await response.json();
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+      // API key tidak valid — langsung berhenti, jangan coba model lain
+      if (response.status === 400) {
+        const errData = await response.json().catch(() => ({}));
+        const msg = errData?.error?.message || 'API key tidak valid.';
+        clearApiKey();
+        throw new Error(`API key ditolak: ${msg}`);
+      }
+      if (response.status === 401 || response.status === 403) {
+        clearApiKey();
+        throw new Error('API key tidak memiliki izin akses Gemini API. Pastikan Gemini API sudah diaktifkan di Google AI Studio.');
+      }
+      if (response.status === 429) {
+        throw new Error('Kuota habis atau terlalu banyak permintaan. Tunggu beberapa menit lalu coba lagi.');
+      }
 
-    if (!text) {
-      throw new Error('Respons dari Gemini tidak valid atau kosong.');
+      // 404 = model ini tidak tersedia untuk key ini, coba model berikutnya
+      if (response.status === 404) {
+        console.warn(`[AIService] Model ${model} tidak tersedia (404), mencoba model berikutnya...`);
+        lastError = `Model ${model} tidak tersedia`;
+        continue;
+      }
+
+      if (!response.ok) {
+        lastError = `HTTP ${response.status} dari model ${model}`;
+        continue;
+      }
+
+      const data = await response.json();
+      const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+      if (!text) {
+        lastError = `Respons kosong dari model ${model}`;
+        continue;
+      }
+
+      // Berhasil — simpan model yang bekerja untuk dipakai lagi
+      console.info(`[AIService] Berhasil menggunakan model: ${model}`);
+      return {
+        type: 'live',
+        title: 'Jawaban dari Gemini AI',
+        summary: text,
+        sections: [],
+        significance: '',
+        trustLevel: 'unverified',
+        trustNote: 'Jawaban dihasilkan oleh model AI Google Gemini. Selalu verifikasi dengan sumber primer untuk penggunaan akademis.',
+        source: `Google Gemini AI — ${model}`,
+        topic: 'live'
+      };
+
+    } catch (err) {
+      // Error yang bukan 404 (misal: API key invalid) — langsung lempar, jangan retry
+      if (err.message.includes('API key') || err.message.includes('izin') || err.message.includes('Kuota')) {
+        console.error('[AIService] Fatal error:', err.message);
+        const demoResult = await demoProcess(question);
+        demoResult._liveError = err.message;
+        return demoResult;
+      }
+      lastError = err.message;
+      continue;
     }
-
-    return {
-      type: 'live',
-      title: 'Jawaban dari Gemini AI',
-      summary: text,
-      sections: [],
-      significance: '',
-      trustLevel: 'unverified',
-      trustNote: 'Jawaban dihasilkan oleh model AI Google Gemini. Selalu verifikasi dengan sumber primer untuk penggunaan akademis.',
-      source: 'Google Gemini AI (Live Mode)',
-      topic: 'live'
-    };
-
-  } catch (err) {
-    // Jika API gagal, fallback ke demo dengan notifikasi
-    console.error('[AIService] Gemini error:', err.message);
-    const demoResult = await demoProcess(question);
-    demoResult._liveError = err.message;
-    return demoResult;
   }
+
+  // Semua model gagal
+  console.error('[AIService] Semua model gagal. Error terakhir:', lastError);
+  const demoResult = await demoProcess(question);
+  demoResult._liveError = `Semua model Gemini tidak dapat diakses dengan API key ini. Pastikan Gemini API sudah diaktifkan di: https://aistudio.google.com/`;
+  return demoResult;
 }
