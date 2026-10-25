@@ -17,7 +17,7 @@ let currentMode = 'demo'; // 'demo' | 'live'
 let geminiApiKey = null;
 
 // Konstanta
-const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
 const SYSTEM_PROMPT = `Kamu adalah asisten pengetahuan budaya untuk Kabupaten Bantul, Daerah Istimewa Yogyakarta, Indonesia.
 Tugas kamu adalah menjawab pertanyaan tentang tradisi, kuliner, kerajinan, seni pertunjukan, dan warisan budaya Bantul.
 Panduan:
