@@ -17,13 +17,36 @@ let currentMode = 'demo'; // 'demo' | 'live'
 let geminiApiKey = null;
 
 // Konstanta — daftar model dicoba berurutan sampai berhasil
-const GEMINI_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
+const GEMINI_BASE_DIRECT = 'https://generativelanguage.googleapis.com/v1beta/models';
+const GEMINI_BASE_PROXY  = '/api/gemini';          // via server.js lokal (atasi CORS file://)
 const GEMINI_MODELS = [
   'gemini-1.5-flash',
   'gemini-1.5-flash-latest',
   'gemini-1.5-pro',
   'gemini-pro',
 ];
+
+/**
+ * Deteksi apakah aplikasi berjalan via HTTP server (localhost/127.0.0.1)
+ * atau dibuka langsung sebagai file:// .
+ * - HTTP server → pakai proxy lokal (server.js) agar tidak CORS
+ * - file://      → langsung ke Gemini (mungkin CORS, tapi coba dulu)
+ */
+function isRunningOnServer() {
+  return (
+    window.location.protocol === 'http:' ||
+    window.location.protocol === 'https:'
+  );
+}
+
+function buildGeminiUrl(model, key) {
+  if (isRunningOnServer()) {
+    // Pakai proxy → key tidak masuk URL browser history
+    return `${GEMINI_BASE_PROXY}?model=${encodeURIComponent(model)}&key=${encodeURIComponent(key)}`;
+  }
+  // Fallback: langsung ke Google (mungkin kena CORS kalau file://)
+  return `${GEMINI_BASE_DIRECT}/${model}:generateContent?key=${key}`;
+}
 const SYSTEM_PROMPT = `Kamu adalah asisten pengetahuan budaya untuk Kabupaten Bantul, Daerah Istimewa Yogyakarta, Indonesia.
 Tugas kamu adalah menjawab pertanyaan tentang tradisi, kuliner, kerajinan, seni pertunjukan, dan warisan budaya Bantul.
 Panduan:
@@ -130,7 +153,7 @@ async function askGemini(question) {
   // Coba setiap model sampai salah satu berhasil
   for (const model of GEMINI_MODELS) {
     try {
-      const url = `${GEMINI_BASE}/${model}:generateContent?key=${key}`;
+      const url = buildGeminiUrl(model, key);
       const response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
