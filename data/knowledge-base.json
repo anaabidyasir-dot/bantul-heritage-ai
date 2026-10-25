@@ -1,0 +1,345 @@
+{
+  "meta": {
+    "version": "1.0",
+    "language": "id",
+    "region": "Kabupaten Bantul, Daerah Istimewa Yogyakarta",
+    "disclaimer": "Konten ini bersifat informatif dan edukatif. Bukan pengganti sumber akademis primer.",
+    "last_updated": "2025"
+  },
+  "entries": [
+    {
+      "id": "kb-001",
+      "topic": "tradisi",
+      "keywords": ["tradisi", "unik", "adat", "upacara", "ritual", "budaya"],
+      "question_examples": [
+        "Apa tradisi unik yang ada di Bantul?",
+        "Apa upacara adat di Bantul?"
+      ],
+      "title": "Tradisi Unik Kabupaten Bantul",
+      "answer": {
+        "ringkasan": "Kabupaten Bantul memiliki berbagai tradisi unik yang masih dilestarikan hingga kini, mencerminkan perpaduan nilai spiritual, agraris, dan sosial masyarakat Jawa.",
+        "isi": [
+          {
+            "subtopik": "Merti Dusun (Bersih Desa)",
+            "keterangan": "Upacara adat yang dilakukan secara rutin oleh warga dusun sebagai ungkapan syukur atas hasil bumi dan keselamatan kampung. Biasanya meliputi kenduri, kirab budaya, dan pentas seni tradisional."
+          },
+          {
+            "subtopik": "Rasulan",
+            "keterangan": "Tradisi syukuran panen yang dilakukan oleh para petani di beberapa desa di Bantul. Warga berkumpul bersama, membawa hasil bumi, dan berdoa bersama sebagai tanda terima kasih."
+          },
+          {
+            "subtopik": "Labuhan Parangkusumo",
+            "keterangan": "Upacara larung sesaji di Pantai Parangkusumo yang dilaksanakan setiap tahun, berkaitan dengan tradisi Keraton Yogyakarta dan penghormatan kepada Penguasa Laut Selatan."
+          }
+        ],
+        "signifikansi": "Tradisi-tradisi ini berfungsi memperkuat ikatan sosial masyarakat, melestarikan identitas budaya Jawa, dan menjaga keseimbangan antara manusia, alam, dan nilai-nilai spiritual."
+      },
+      "trust_level": "verified",
+      "trust_note": "Berdasarkan informasi budaya yang tersedia secara publik tentang tradisi Kabupaten Bantul dan Daerah Istimewa Yogyakarta."
+    },
+    {
+      "id": "kb-002",
+      "topic": "kuliner",
+      "keywords": ["makanan", "kuliner", "tradisional", "khas", "masakan", "jajanan", "pangan"],
+      "question_examples": [
+        "Apa makanan tradisional khas Bantul?",
+        "Kuliner apa yang terkenal di Bantul?"
+      ],
+      "title": "Makanan Tradisional Khas Bantul",
+      "answer": {
+        "ringkasan": "Bantul memiliki ragam kuliner tradisional yang kaya, mulai dari makanan pokok, camilan, hingga minuman khas yang mencerminkan kearifan lokal masyarakat agraris Jawa.",
+        "isi": [
+          {
+            "subtopik": "Gudeg Bantul",
+            "keterangan": "Gudeg merupakan masakan ikonik Yogyakarta yang juga menjadi kebanggaan Bantul. Terbuat dari nangka muda yang dimasak perlahan dengan santan dan rempah, menghasilkan cita rasa manis gurih yang khas."
+          },
+          {
+            "subtopik": "Sate Klathak",
+            "keterangan": "Sate kambing khas Bantul yang dibakar menggunakan jeruji besi (bukan tusuk bambu biasa) dan hanya dibumbui garam serta merica, menonjolkan cita rasa alami daging. Sangat terkenal di kawasan Jejeran, Pleret."
+          },
+          {
+            "subtopik": "Geplak",
+            "keterangan": "Penganan tradisional berbahan kelapa parut dan gula yang dibentuk bulat dengan berbagai warna cerah. Merupakan oleh-oleh khas Bantul yang sudah ada sejak lama."
+          },
+          {
+            "subtopik": "Peyek Tumpuk",
+            "keterangan": "Kerupuk tipis berbahan tepung beras dengan isian kacang atau ikan teri, menjadi camilan dan oleh-oleh populer dari Bantul."
+          }
+        ],
+        "signifikansi": "Kuliner tradisional Bantul tidak sekadar makanan — ia merupakan cerminan sejarah pertanian, kekayaan rempah lokal, dan kreativitas masyarakat Jawa dalam mengolah bahan-bahan sederhana."
+      },
+      "trust_level": "verified",
+      "trust_note": "Berdasarkan informasi kuliner yang tersedia secara publik tentang Kabupaten Bantul."
+    },
+    {
+      "id": "kb-003",
+      "topic": "kerajinan",
+      "keywords": ["kerajinan", "tangan", "gerabah", "batik", "perak", "anyaman", "kulit", "wayang"],
+      "question_examples": [
+        "Apa kerajinan tangan khas Bantul?",
+        "Di mana bisa beli kerajinan Bantul?"
+      ],
+      "title": "Kerajinan Tangan Khas Bantul",
+      "answer": {
+        "ringkasan": "Bantul dikenal sebagai pusat kerajinan tangan Yogyakarta, dengan sentra-sentra kerajinan yang tersebar di berbagai kecamatan dan menjadi daya tarik wisata budaya.",
+        "isi": [
+          {
+            "subtopik": "Gerabah Kasongan",
+            "keterangan": "Desa Kasongan di Kecamatan Kasihan adalah sentra kerajinan gerabah (tembikar) yang sangat terkenal. Pengrajin menghasilkan berbagai produk dari tanah liat mulai dari perabot dekoratif hingga patung, yang dipasarkan hingga mancanegara."
+          },
+          {
+            "subtopik": "Batik Imogiri",
+            "keterangan": "Kecamatan Imogiri memiliki tradisi membatik yang kuat, menghasilkan batik tulis dan batik cap dengan motif-motif khas Yogyakarta seperti parang, kawung, dan truntum."
+          },
+          {
+            "subtopik": "Kerajinan Kulit Manding",
+            "keterangan": "Desa Manding di Kecamatan Sewon adalah sentra kerajinan kulit, menghasilkan tas, sepatu, ikat pinggang, dan aksesoris berkualitas tinggi dari kulit asli."
+          },
+          {
+            "subtopik": "Kerajinan Bambu & Anyaman",
+            "keterangan": "Berbagai desa di Bantul juga menghasilkan kerajinan anyaman dari bambu dan daun pandan, seperti tikar, tempat makan, dan ornamen rumah."
+          }
+        ],
+        "signifikansi": "Industri kerajinan Bantul menjadi tulang punggung ekonomi kreatif lokal, memberdayakan ribuan pengrajin dan menjaga keberlangsungan keahlian tradisional yang diwariskan turun-temurun."
+      },
+      "trust_level": "verified",
+      "trust_note": "Berdasarkan informasi kerajinan yang tersedia secara publik tentang sentra industri Kabupaten Bantul."
+    },
+    {
+      "id": "kb-004",
+      "topic": "kerajinan-gerabah",
+      "keywords": ["gerabah", "kasongan", "tembikar", "tanah liat", "potter", "pottery"],
+      "question_examples": [
+        "Ceritakan tentang Kerajinan Gerabah Kasongan",
+        "Apa itu gerabah Kasongan?"
+      ],
+      "title": "Kerajinan Gerabah Kasongan",
+      "answer": {
+        "ringkasan": "Desa Kasongan di Kecamatan Kasihan, Bantul, adalah salah satu sentra kerajinan gerabah paling terkenal di Indonesia, dengan sejarah yang sudah berlangsung ratusan tahun.",
+        "isi": [
+          {
+            "subtopik": "Sejarah Singkat",
+            "keterangan": "Tradisi membuat gerabah di Kasongan sudah berlangsung turun-temurun. Warga desa memanfaatkan tanah liat yang melimpah di sekitar wilayah ini untuk menciptakan berbagai bentuk peralatan dan dekorasi."
+          },
+          {
+            "subtopik": "Produk Unggulan",
+            "keterangan": "Produk Kasongan meliputi pot bunga, patung hewan, figura manusia, perabot dekoratif, dan berbagai ornamen artistik. Desainnya berkembang mengikuti tren pasar domestik dan internasional."
+          },
+          {
+            "subtopik": "Proses Pembuatan",
+            "keterangan": "Proses dimulai dari pemilihan dan pengolahan tanah liat, pembentukan dengan tangan atau roda putar, pengeringan, pembakaran dalam tungku, hingga pengecatan dan finishing."
+          },
+          {
+            "subtopik": "Pasar & Ekspor",
+            "keterangan": "Produk gerabah Kasongan telah diekspor ke berbagai negara. Di sepanjang jalan desa terdapat banyak showroom yang memajang dan menjual produk langsung kepada pengunjung."
+          }
+        ],
+        "signifikansi": "Kasongan adalah contoh nyata bagaimana kerajinan tradisional dapat berkembang menjadi industri kreatif modern yang berdaya saing global tanpa kehilangan akar budayanya."
+      },
+      "trust_level": "verified",
+      "trust_note": "Berdasarkan informasi yang tersedia secara publik tentang Desa Kasongan, Kecamatan Kasihan, Bantul."
+    },
+    {
+      "id": "kb-005",
+      "topic": "seni-pertunjukan",
+      "keywords": ["seni", "pertunjukan", "wayang", "gamelan", "tari", "ketoprak", "musik", "pentas"],
+      "question_examples": [
+        "Apa seni pertunjukan tradisional di Bantul?",
+        "Seni budaya apa yang ada di Bantul?"
+      ],
+      "title": "Seni Pertunjukan Tradisional Bantul",
+      "answer": {
+        "ringkasan": "Bantul merupakan salah satu pusat seni pertunjukan tradisional Jawa yang masih hidup dan aktif, didukung oleh kedekatan geografis dan budaya dengan Keraton Yogyakarta.",
+        "isi": [
+          {
+            "subtopik": "Wayang Kulit",
+            "keterangan": "Pertunjukan wayang kulit dengan dalang berbakat masih sering dipentaskan dalam berbagai acara adat, hajatan, dan festival budaya. Bantul memiliki banyak dalang dan kelompok wayang yang aktif."
+          },
+          {
+            "subtopik": "Gamelan",
+            "keterangan": "Gamelan merupakan ansambel musik tradisional Jawa yang menjadi bagian tak terpisahkan dari berbagai upacara dan pertunjukan. Banyak kelompok karawitan (ensembel gamelan) aktif di berbagai desa Bantul."
+          },
+          {
+            "subtopik": "Tari Klasik Yogyakarta",
+            "keterangan": "Tari-tarian klasik gaya Yogyakarta seperti Bedhaya, Srimpi, dan Golek dipelajari dan dipentaskan di Bantul. Sanggar-sanggar tari aktif melestarikan tradisi ini."
+          },
+          {
+            "subtopik": "Ketoprak",
+            "keterangan": "Ketoprak adalah seni drama musikal tradisional Jawa yang mementaskan cerita sejarah dan legenda. Masih aktif dipentaskan dalam acara-acara budaya di Bantul."
+          }
+        ],
+        "signifikansi": "Seni pertunjukan tradisional di Bantul tidak hanya berfungsi sebagai hiburan, tetapi juga sebagai media pendidikan nilai-nilai budaya, spiritualitas, dan sejarah kepada generasi berikutnya."
+      },
+      "trust_level": "verified",
+      "trust_note": "Berdasarkan informasi seni budaya yang tersedia secara publik tentang Kabupaten Bantul dan tradisi Jawa."
+    },
+    {
+      "id": "kb-006",
+      "topic": "kepercayaan-informasi",
+      "keywords": ["percaya", "dipercaya", "verifikasi", "valid", "akurat", "sumber", "terpercaya", "benar"],
+      "question_examples": [
+        "Bagaimana cara mengetahui apakah informasi budaya dapat dipercaya?",
+        "Apakah informasi di sini akurat?"
+      ],
+      "title": "Menilai Kepercayaan Informasi Budaya",
+      "answer": {
+        "ringkasan": "Dalam dunia digital, kemampuan menilai kredibilitas informasi budaya adalah keterampilan penting. Berikut panduan praktisnya.",
+        "isi": [
+          {
+            "subtopik": "Periksa Sumbernya",
+            "keterangan": "Informasi yang dapat dipercaya biasanya berasal dari lembaga resmi (Dinas Kebudayaan, Keraton, universitas), buku teks akademis, atau jurnal penelitian yang bisa diverifikasi."
+          },
+          {
+            "subtopik": "Cek Lintas Sumber",
+            "keterangan": "Jika sebuah fakta budaya hanya muncul di satu tempat, berhati-hatilah. Informasi yang valid umumnya dikonfirmasi oleh beberapa sumber independen."
+          },
+          {
+            "subtopik": "Waspadai Generalisasi Berlebihan",
+            "keterangan": "Budaya bersifat beragam dan terus berkembang. Hindari sumber yang menyajikan tradisi budaya sebagai sesuatu yang kaku, seragam, atau tidak berubah."
+          },
+          {
+            "subtopik": "Perhatikan Label di Bantul Heritage AI",
+            "keterangan": "Setiap jawaban di aplikasi ini dilengkapi badge: ✅ Terverifikasi (berdasarkan informasi publik yang tersedia) atau ⚠️ Belum Terverifikasi (informasi umum yang belum dikonfirmasi dari sumber primer)."
+          }
+        ],
+        "signifikansi": "Literasi informasi adalah bagian dari penghormatan terhadap budaya. Menyebarkan informasi yang belum terverifikasi dapat merugikan komunitas budaya yang bersangkutan."
+      },
+      "trust_level": "verified",
+      "trust_note": "Panduan literasi informasi ini bersifat umum dan tidak spesifik pada satu sumber tertentu."
+    },
+    {
+      "id": "kb-007",
+      "topic": "pantai-pariwisata",
+      "keywords": ["pantai", "wisata", "parangtritis", "parangkusumo", "samas", "depok", "laut", "selatan"],
+      "question_examples": [
+        "Pantai apa yang terkenal di Bantul?",
+        "Wisata alam apa yang ada di Bantul?"
+      ],
+      "title": "Pantai & Wisata Alam Bantul",
+      "answer": {
+        "ringkasan": "Bantul memiliki garis pantai di pesisir selatan Pulau Jawa dengan beberapa pantai yang terkenal dan sarat nilai budaya.",
+        "isi": [
+          {
+            "subtopik": "Pantai Parangtritis",
+            "keterangan": "Pantai paling terkenal di Bantul dan salah satu yang paling populer di Yogyakarta. Memiliki nilai budaya tinggi — secara tradisional dikaitkan dengan Nyi Roro Kidul (Ratu Laut Selatan) dalam mitologi Jawa."
+          },
+          {
+            "subtopik": "Pantai Parangkusumo",
+            "keterangan": "Berdekatan dengan Parangtritis, pantai ini menjadi lokasi upacara Labuhan dari Keraton Yogyakarta. Terdapat petilasan Syech Maulana Maghribi yang diziarahi masyarakat."
+          },
+          {
+            "subtopik": "Pantai Depok",
+            "keterangan": "Terkenal sebagai pusat kuliner ikan laut segar. Pengunjung dapat menikmati berbagai hidangan laut langsung dari nelayan setempat."
+          }
+        ],
+        "signifikansi": "Pantai-pantai Bantul bukan sekadar objek wisata alam, tetapi juga situs budaya dan spiritual yang penting dalam kosmologi Jawa."
+      },
+      "trust_level": "verified",
+      "trust_note": "Berdasarkan informasi pariwisata yang tersedia secara publik tentang Kabupaten Bantul."
+    },
+    {
+      "id": "kb-008",
+      "topic": "imogiri",
+      "keywords": ["imogiri", "makam", "raja", "sultan", "mataram", "ziarah"],
+      "question_examples": [
+        "Apa itu Makam Raja Imogiri?",
+        "Ceritakan tentang Imogiri"
+      ],
+      "title": "Makam Raja-raja Imogiri",
+      "answer": {
+        "ringkasan": "Imogiri adalah sebuah kecamatan di Bantul yang menjadi lokasi kompleks makam raja-raja Mataram dan para Sultan Yogyakarta, sehingga memiliki nilai sejarah dan spiritual yang sangat tinggi.",
+        "isi": [
+          {
+            "subtopik": "Sejarah Makam",
+            "keterangan": "Kompleks pemakaman ini dibangun pada masa pemerintahan Sultan Agung dari Kerajaan Mataram sekitar abad ke-17. Hingga kini menjadi tempat peristirahatan terakhir para raja Mataram dan keturunannya."
+          },
+          {
+            "subtopik": "Tata Cara Kunjungan",
+            "keterangan": "Pengunjung yang ingin masuk ke area makam diwajibkan mengenakan pakaian adat Jawa (jarik dan baju tradisional yang disewakan di tempat). Ada hari dan jam tertentu yang dibuka untuk umum."
+          },
+          {
+            "subtopik": "Nilai Budaya",
+            "keterangan": "Makam Imogiri bukan sekadar situs sejarah, tetapi juga tempat ziarah aktif. Banyak peziarah datang pada malam Jumat Kliwon atau malam-malam khusus dalam kalender Jawa."
+          }
+        ],
+        "signifikansi": "Makam Imogiri adalah penghubung nyata antara sejarah Kerajaan Mataram, tradisi spiritual Jawa, dan kehidupan masyarakat Bantul masa kini."
+      },
+      "trust_level": "verified",
+      "trust_note": "Berdasarkan informasi sejarah yang tersedia secara publik tentang Makam Imogiri, Bantul."
+    },
+    {
+      "id": "kb-009",
+      "topic": "batik",
+      "keywords": ["batik", "motif", "kain", "tulis", "cap", "mori"],
+      "question_examples": [
+        "Bagaimana sejarah batik di Bantul?",
+        "Apa motif batik khas Bantul?"
+      ],
+      "title": "Batik Tradisional Bantul",
+      "answer": {
+        "ringkasan": "Batik merupakan warisan budaya tak benda yang diakui UNESCO, dan Bantul memiliki tradisi membatik yang kuat, terutama di wilayah Imogiri.",
+        "isi": [
+          {
+            "subtopik": "Sentra Batik Imogiri",
+            "keterangan": "Kecamatan Imogiri, khususnya daerah Giriloyo dan Wukirsari, terkenal sebagai sentra batik tulis tangan berkualitas tinggi. Para pengrajin menggunakan teknik tradisional dengan canting dan malam (lilin batik)."
+          },
+          {
+            "subtopik": "Motif Khas",
+            "keterangan": "Motif batik Yogyakarta yang umum ditemukan di Bantul antara lain Parang (lambang keberanian), Kawung (motif buah aren yang melambangkan kesucian), Sidomukti, dan Truntum."
+          },
+          {
+            "subtopik": "Proses Batik Tulis",
+            "keterangan": "Proses batik tulis memakan waktu lama — dari menyiapkan kain, menggambar pola, menutup dengan malam menggunakan canting, mencelup warna, hingga melorot (menghilangkan malam). Satu lembar batik tulis bisa membutuhkan waktu berminggu-minggu."
+          }
+        ],
+        "signifikansi": "Batik adalah ekspresi tertinggi seni tekstil Jawa. Setiap motif memiliki makna filosofis dan konteks penggunaannya tersendiri dalam siklus kehidupan masyarakat Jawa."
+      },
+      "trust_level": "verified",
+      "trust_note": "Berdasarkan informasi batik yang tersedia secara publik tentang tradisi tekstil Yogyakarta dan Bantul."
+    },
+    {
+      "id": "kb-010",
+      "topic": "wayang",
+      "keywords": ["wayang", "kulit", "dalang", "lakon", "pewayangan", "punakawan"],
+      "question_examples": [
+        "Apa itu wayang kulit?",
+        "Ceritakan tentang wayang di Bantul"
+      ],
+      "title": "Wayang Kulit di Bantul",
+      "answer": {
+        "ringkasan": "Wayang kulit adalah seni pertunjukan boneka kulit yang telah diakui UNESCO sebagai Warisan Budaya Tak Benda Kemanusiaan. Bantul memiliki komunitas pewayangan yang aktif dan bersemangat.",
+        "isi": [
+          {
+            "subtopik": "Apa itu Wayang Kulit?",
+            "keterangan": "Wayang kulit adalah pertunjukan teater bayangan yang menggunakan boneka dari kulit kerbau yang dipahat halus, digerakkan oleh seorang dalang (pemimpin pertunjukan) diiringi musik gamelan dan tembang (nyanyian)."
+          },
+          {
+            "subtopik": "Lakon & Cerita",
+            "keterangan": "Cerita wayang bersumber dari epik Hindu Mahabharata dan Ramayana yang telah diadaptasi ke dalam konteks budaya Jawa, serta cerita-cerita lokal (carangan). Tokoh Punakawan (Semar, Gareng, Petruk, Bagong) adalah karakter asli Jawa."
+          },
+          {
+            "subtopik": "Dalang di Bantul",
+            "keterangan": "Bantul dan sekitarnya dikenal sebagai daerah yang melahirkan banyak dalang berbakat. Pertunjukan wayang rutin diadakan dalam acara hajatan, festival budaya, dan memperingati hari-hari penting."
+          }
+        ],
+        "signifikansi": "Wayang bukan sekadar hiburan — ia adalah media filsafat, pendidikan moral, dan spiritualitas yang menyampaikan nilai-nilai luhur Jawa melalui narasi dan simbolisme yang kaya."
+      },
+      "trust_level": "verified",
+      "trust_note": "Berdasarkan informasi pewayangan yang tersedia secara publik. Wayang kulit diakui UNESCO pada tahun 2003."
+    },
+    {
+      "id": "kb-fallback",
+      "topic": "_fallback",
+      "keywords": [],
+      "question_examples": [],
+      "title": "Pertanyaan di Luar Cakupan",
+      "answer": {
+        "ringkasan": "Maaf, saya belum dapat menemukan jawaban yang memadai untuk pertanyaan ini dalam basis pengetahuan demo saat ini.",
+        "isi": [],
+        "signifikansi": ""
+      },
+      "trust_level": "unverified",
+      "trust_note": "Jawaban tidak ditemukan dalam basis pengetahuan demo."
+    }
+  ]
+}

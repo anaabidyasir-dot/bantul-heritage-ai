@@ -1,0 +1,163 @@
+/* ============================================================
+   responsive.css — Media queries & mobile adjustments
+   Bantul Heritage AI
+   ============================================================ */
+
+/* ============================================================
+   TABLET — max 768px
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Header */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .header-nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .site-title { font-size: 1.1rem; }
+  .site-subtitle { font-size: 0.68rem; }
+
+  /* Hero */
+  .hero-title  { font-size: 1.5rem; }
+  .hero-inner  { padding: var(--space-xl) var(--space-md); }
+
+  /* Chat */
+  .chat-section { padding: var(--space-xl) var(--space-md); }
+
+  .suggestions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .message-body { max-width: 90%; }
+
+  .chat-messages {
+    min-height: 250px;
+    max-height: 400px;
+    padding: var(--space-md);
+  }
+
+  /* About */
+  .about-inner { padding: var(--space-xl) var(--space-md); }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   MOBILE — max 480px
+   ============================================================ */
+@media (max-width: 480px) {
+
+  html { font-size: 14px; }
+
+  /* Header: stack brand vertically */
+  .header-brand { flex-direction: column; align-items: flex-start; gap: var(--space-xs); }
+  .batik-logo   { width: 36px; height: 36px; }
+  .site-title   { font-size: 1rem; }
+
+  .mode-badge { font-size: 0.68rem; padding: 2px 8px; }
+
+  /* Hero */
+  .hero-title    { font-size: 1.25rem; }
+  .hero-desc     { font-size: 0.875rem; }
+  .hero-desc-en  { display: none; } /* simplify on very small screens */
+  .hero-cta      { padding: var(--space-sm) var(--space-lg); font-size: 0.9rem; }
+
+  /* Suggestion buttons: full width */
+  .suggestion-btn { font-size: 0.82rem; }
+
+  /* Chat input: stack on small screens */
+  .input-wrapper   { flex-direction: column; align-items: stretch; }
+  .send-btn        { width: 100%; justify-content: center; }
+  .chat-input      { max-height: 80px; }
+
+  .message-body { max-width: 95%; }
+  .message-avatar { width: 30px; height: 30px; font-size: 0.9rem; }
+
+  .input-note { display: none; } /* shown in about section instead */
+  .char-count { margin-left: auto; }
+
+  /* About */
+  .about-card { padding: var(--space-md); }
+  .section-heading { font-size: 1.2rem; }
+}
+
+/* ============================================================
+   LARGE SCREENS — min 1200px
+   ============================================================ */
+@media (min-width: 1200px) {
+  .chat-messages { max-height: 600px; }
+  .hero-title { font-size: 2.4rem; }
+}
+
+/* ============================================================
+   REDUCED MOTION — accessibility
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ============================================================
+   HIGH CONTRAST — accessibility
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  /* Subtle dark mode adjustment — keep brand colors */
+  :root {
+    --color-surface:     #1C1208;
+    --color-surface-alt: #241808;
+    --color-white:       #F5EDE0;
+    --color-text:        #EDE0D0;
+    --color-text-muted:  #B09070;
+    --color-border:      #4A3020;
+  }
+
+  .chat-window,
+  .chat-form,
+  .suggestions {
+    background-color: #1C1208;
+  }
+
+  .message-content {
+    background-color: #241808;
+    border-color: #4A3020;
+    color: var(--color-text);
+  }
+
+  .chat-input {
+    background-color: #241808;
+    color: var(--color-text);
+    border-color: #4A3020;
+  }
+
+  .chat-input::placeholder { color: var(--color-text-muted); }
+
+  .badge--verified   { background-color: #1A3A2A; }
+  .badge--unverified { background-color: #3A2A10; }
+  .badge--info       { background-color: #1A2030; }
+  .badge--demo       { background-color: #2A1A3A; }
+
+  .answer-source { background-color: #241808; }
+
+  .about-card { background-color: rgba(255,255,255,0.04); }
+
+  .suggestion-btn {
+    background-color: #241808;
+    color: var(--color-accent-light);
+    border-color: #4A3020;
+  }
+  .suggestion-btn:hover {
+    background-color: #301C08;
+  }
+}
